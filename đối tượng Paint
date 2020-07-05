@@ -1,0 +1,36 @@
+Paint trong java dùng để định nghĩa size, color, kiểu nét vẽ mà chúng ta sẽ sử dụng để vẽ bởi canvas (truyền vào method cavas.draw… trong phương thức onDraw của View).
+
+Các method của class Paint
+
+Trước tiên chúng ta có 2 cách khởi tạo Paint
+Cách 1: Contructor không có đối số
+Paint mPaint = new Paint();
+
+Cách 2: Contructor có hai đối số
+Paint mPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+
+==============.Và dưới đây là các phương thức được sử dụng phổ biến.===============
+
+setColor(int color); Set màu cho nét vẽ.
+
+setAlpha(int a); Set giá trị Alpha cho nét vẽ. Chỉ chấp nhận các giá trị từ 0 đến 255. Thường sử dụng để làm animation fade in và fade out.
+
+setStrokeWidth(float width); Set giá trị độ rộng của net vẽ.
+
+setStyle(Style style); Set style cho nét vẽ. Có ba giá trị như sau:
+
+Paint.Style.FILL: Kiểu này dùng để tô đối tượng, ví dụ như tô hình tròn, elip, oval.
+
+Paint.Style.STROKE. Kiểu này dùng để vẽ đường. ví dụ như vẽ đường tròn mà không có tô.
+
+**Paint.Style.FILL_AND_STROKE:**Kiểu vừa vẻ vừa tô.
+
+setStrokeCap(Cap cap); Set style vẽ ở những điểm kết thúc của hai đường thẳng và có những giá trị sau:
+
+Cap.ROUND: Bo tròn nét vẽ ở hai đầu mút của đoạn thẳng.
+
+Cap.SQUARE: Vẽ nét vẽ bình thường. Nét vẽ sẽ sắc cạch ở hai đầu mút của đoạn thẳng.
+
+setTypeface(Typeface typeface); Set kiểu phong cho nét vẽ, sử dụng trong trường hợp chúng ta muốn vẽ text.
+
+setTextSize(float textSize); set font size cho nét vẽ, sử dụng trong trường hợp vẽ text.
